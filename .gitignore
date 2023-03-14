@@ -1,0 +1,11 @@
+Manifest.toml
+.ipynb_checkpoints
+*~
+#*
+.DS_Store
+sandbox/
+/docs/build/
+/docs/site/
+/docs/Manifest.toml
+/test/Manifest.toml
+.vscode
