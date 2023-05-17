@@ -13,7 +13,7 @@ A Julia package for building production-ready measures (metrics) for statistics 
 Here's an example of a simple statistical measure, applied to a pair of scalars:
 
 ```@example 01
-l1(ŷ, y) = abs(ŷ - y) 
+l1(ŷ, y) = abs(ŷ - y)
 y = 5 # ground truth
 ŷ = 2 # prediction
 l1(ŷ, y)
@@ -23,11 +23,11 @@ Wrappers provided in this package extend the functionality of such measures. For
 
 ```@example 01
 using StatisticalMeasuresBase
-L1 = multimeasure(supports_missings_measure(l1))
-y = [1, 2, missing]
-ŷ = [2, 3, 4]
-weights = [8, 7, 6]
-L1(ŷ, y, weights)
+L1 = multimeasure(supports_missings_measure(l1), mode=Sum())
+y = [5, 6, missing]
+ŷ = [6, 8, 7]
+weights = [1, 3, 9]
+L1(ŷ, y, weights) ≈ 1*l1(6, 5) + 3*l1(8, 6)
 ```
 
 ```@example 01

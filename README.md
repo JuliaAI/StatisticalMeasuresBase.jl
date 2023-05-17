@@ -7,7 +7,7 @@ A Julia package for building production-ready measures (metrics) for statistics 
 [![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/)
 
 Related:
-[StatisticalMeasures.jl](https://github.com/JuliaAI/StatisticalMeasuresBase.jl/actions).
+[StatisticalMeasures.jl](https://github.com/JuliaAI/StatisticalMeasures.jl).
 
 
 ## The main idea 
@@ -27,13 +27,13 @@ Wrappers provided in this package extend the functionality of such measures. For
 
 ```julia
 using StatisticalMeasuresBase
-L1 = multimeasure(supports_missings_measure(l1))
-y = [1, 2, missing]
-ŷ = [2, 3, 4]
-weights = [8, 7, 6]
+L1 = multimeasure(supports_missings_measure(l1), mode=Sum())
+y = [5, 6, missing]
+ŷ = [6, 8, 7]
+weights = [1, 3, 9]
 
-julia> L1(ŷ, y, weights)
-5.0
+julia> L1(ŷ, y, weights) ≈ 1*l1(6, 5) + 3*l1(8, 6)
+true
 ```
 
 ```julia
