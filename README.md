@@ -6,6 +6,9 @@ A Julia package for building production-ready measures (metrics) for statistics 
 [![Coverage](https://codecov.io/gh/JuliaAI/StatisticalMeasuresBase.jl/branch/master/graph/badge.svg)](https://codecov.io/github/JuliaAI/StatisticalMeasuresBase.jl?branch=master)
 [![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/)
 
+Related:
+[StatisticalMeasures.jl](https://github.com/JuliaAI/StatisticalMeasuresBase.jl/actions).
+
 
 ## The main idea 
 
@@ -63,3 +66,5 @@ julia> measurements(multitarget_L1, t̂, t, weights)
   9.0
 ```
 
+See [here](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/) for in-depth
+documentation.
