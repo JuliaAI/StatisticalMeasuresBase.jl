@@ -63,6 +63,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using StatisticalMeasuresAPI
-            DocMeta.setdocmeta!(StatisticalMeasuresAPI, :DocTestSetup, :(using StatisticalMeasuresAPI); recursive=true)
-            doctest(StatisticalMeasuresAPI)'
+            using StatisticalMeasuresBase
+            DocMeta.setdocmeta!(StatisticalMeasuresBase, :DocTestSetup, :(using StatisticalMeasuresBase); recursive=true)
+            doctest(StatisticalMeasuresBase)'
