@@ -59,7 +59,6 @@ Access per-observation measurements with the measurement method:
 
 ```julia
 julia> measurements(multitarget_L1, t̂, t, weights)
-
 3-element Vector{Int64}:
   3
   9
