@@ -27,7 +27,7 @@ L1 = multimeasure(supports_missings_measure(l1), mode=Sum())
 y = [5, 6, missing]
 ŷ = [6, 8, 7]
 weights = [1, 3, 9]
-L1(ŷ, y, weights) ≈ 1*abs(6 - 5) + 3*abs(8 - 6)
+L1(ŷ, y, weights) ≈ 1*l1(6, 5) + 3*l1(8, 6)
 ```
 
 ```@example 01
