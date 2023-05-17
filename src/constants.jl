@@ -20,17 +20,6 @@ const DOC_SCITYPES =
     "Scientific types can be imported from "*
     "ScientificTypesBase.jl; see also the ScientificTypes.jl documentation. "
 
-ERR_BAD_FUNCTION(f) = ErrorException(
-"It looks like you're trying to use the function $f as an aggregating "*
-    "measure but have not flagged it as such. Consider declaring "*
-    "`StatisticalMeasuresBase.can_report_unaggregated(::typeof($f)) = true`."
-)
-
-ERR_NOT_A_MEASURE(measure) = ArgumentError(
-    "$measure is not a measure, as defined in by StatisticalMeasuresBase.jl. "*
-        "Did you maybe pass a type instead of an instance? "
-)
-
 ERR_NOT_CONVERTIBLE = ArgumentError("Not convertibe to a $API.jl measure. ")
 
 const ERR_UNSUPPORTED_BY_FUSSY = ArgumentError(
@@ -85,9 +74,4 @@ ERR_NOT_NAME_VALUE_EXPRESSION(head) = ArgumentError(
 ERR_BAD_TRAIT(trait) = ArgumentError(
     "$trait is not an overloadable trait. Only these traits can be overloaded: "*
     "$OVERLOADABLE_TRAITS_LIST. "
-)
-
-ERR_MEASUREMENTS_UNSUPPORTED(measure) = ArgumentError(
-    "The `measurements` cannot be called on $measure as "*
-        "`$API.consumes_multiple_observations(measure)` is `false`. "
 )

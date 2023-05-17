@@ -24,13 +24,13 @@ call(measure::SupportsMissingsMeasure, ::Missing, ::Missing, args...) = missing
 call(measure::SupportsMissingsMeasure, ::Missing, y, args...) = missing
 call(measure::SupportsMissingsMeasure, yhat, ::Missing, args...) = missing
 
-measurments(measure::SupportsMissingsMeasure, yhat, y, args...) =
-    measurments(atom(measure), yhat, y, args...)
-measurments(measure::SupportsMissingsMeasure, ::Missing, ::Missing, args...) =
+measurements(measure::SupportsMissingsMeasure, yhat, y, args...) =
+    measurements(atom(measure), yhat, y, args...)
+measurements(measure::SupportsMissingsMeasure, ::Missing, ::Missing, args...) =
     missing
-measurments(measure::SupportsMissingsMeasure, ::Missing, y, args...) =
+measurements(measure::SupportsMissingsMeasure, ::Missing, y, args...) =
     missing
-measurments(measure::SupportsMissingsMeasure, yhat, ::Missing, args...) =
+measurements(measure::SupportsMissingsMeasure, yhat, ::Missing, args...) =
     missing
 
 
