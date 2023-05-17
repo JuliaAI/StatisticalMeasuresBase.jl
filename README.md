@@ -43,7 +43,7 @@ y = [1 2 3; 2 4 6]
 ŷ = [2 3 4; 4 6 8]
 
 julia> multitarget_L1(ŷ, y, weights)
-10.5
+39
 ```
 
 ```julia
@@ -52,18 +52,17 @@ t = y' |> Tables.table |> Tables.rowtable
 t̂ = ŷ' |> Tables.table |> Tables.rowtable
 
 julia> multitarget_L1(t̂, t, weights)
-10.5
+39
 ```
 
-Access per-observation measurements with the measurement method:
+Access per-observation measurements with the `measurement` method:
 
 ```julia
 julia> measurements(multitarget_L1, t̂, t, weights)
-
-3-element Vector{Float64}:
- 12.0
- 10.5
-  9.0
+3-element Vector{Int64}:
+  3
+  9
+ 27
 ```
 
 See [here](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/) for in-depth
