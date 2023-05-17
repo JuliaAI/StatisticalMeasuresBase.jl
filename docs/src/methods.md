@@ -5,8 +5,9 @@
 | [`measurements`](@ref) | for returning individual per-observation measurements                  |
 | [`aggregate`](@ref)    | multipurpose measurement aggregation                                   |
 
-The [`aggregate`](@ref) method takes an optional aggregation `mode` argument, with default
-`Mean()`, whose possible values are explained below.
+The [`aggregate`](@ref) method and [`multimeasure`](@ref) wrapper take an optional
+aggregation `mode` argument, with default `Mean()`, whose possible values are explained
+below.
 
 ```@docs
 StatisticalMeasuresBase.AggregationMode
