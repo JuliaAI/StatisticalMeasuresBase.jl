@@ -63,3 +63,5 @@ julia> measurements(multitarget_L1, t̂, t, weights)
   9.0
 ```
 
+See [here](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/) for in-depth
+documentation.
