@@ -1,6 +1,6 @@
 # StatisticalMeasuresBase.jl
 
-A Julia package for building production-ready measures (metrics) for statistics and machine learning.
+A Julia package for building production-ready measures (metrics) for statistics and machine learning
 
 [![Build Status](https://github.com/JuliaAI/StatisticalMeasuresBase.jl/workflows/CI/badge.svg)](https://github.com/JuliaAI/StatisticalMeasuresBase.jl/actions)
 [![Coverage](https://codecov.io/gh/JuliaAI/StatisticalMeasuresBase.jl/branch/master/graph/badge.svg)](https://codecov.io/github/JuliaAI/StatisticalMeasuresBase.jl?branch=master)
