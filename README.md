@@ -55,7 +55,7 @@ julia> multitarget_L1(t̂, t, weights)
 39
 ```
 
-Access per-observation measurements with the measurement method:
+Access per-observation measurements with the `measurement` method:
 
 ```julia
 julia> measurements(multitarget_L1, t̂, t, weights)
