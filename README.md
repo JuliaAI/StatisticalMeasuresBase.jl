@@ -7,7 +7,7 @@ A Julia package for building production-ready measures (metrics) for statistics 
 [![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/)
 
 
-## The main idea
+## The main idea 
 
 Here's an example of a simple statistical measure that can be applied to a pair of scalars:
 
