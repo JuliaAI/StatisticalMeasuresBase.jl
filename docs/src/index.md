@@ -1,11 +1,11 @@
 ```@raw html
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<div style="font-size:1.25em;font-weight:bold;">
+<div style="font-size:1.4em;font-weight:bold;">
   <a href="tutorial"
     style="color: #389826;">Tutorial</a>           &nbsp;|&nbsp;
-  <a href="https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/implementing_new_measures/#definitions" 
-    style="color: #389826;">What is a measure?</a>   
+  <a href="https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/implementing_new_measures/#definitions"
+    style="color: #9558B2;">What is a measure?</a>
 </div>
 
 <span style="color: #9558B2;font-size:4.5em;">
