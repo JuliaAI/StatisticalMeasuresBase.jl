@@ -59,12 +59,6 @@ Access per-observation measurements with the `measurement` method:
 measurements(multitarget_L1, t̂, t, weights)
 ```
 
-### Quick links
-
-- [Tutorial](@ref), to jump right into building new measures
-- [What is a measure?](@ref definitions)
-
-
 # Overview
 
 This package specifies [an interface](@ref definitions) for statistical measures (metrics)
