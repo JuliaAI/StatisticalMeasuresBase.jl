@@ -10,12 +10,12 @@ Related:
 [StatisticalMeasures.jl](https://juliaai.github.io/StatisticalMeasures.jl/dev/)
 
 
-## The main idea 
+## The main idea
 
 Here's an example of a simple statistical measure that can be applied to a pair of scalars:
 
 ```julia
-l1(ŷ, y) = abs(ŷ - y) 
+l1(ŷ, y) = abs(ŷ - y)
 y = 5 # ground truth
 ŷ = 2 # prediction
 
@@ -55,7 +55,7 @@ julia> multitarget_L1(t̂, t, weights)
 39
 ```
 
-Access per-observation measurements with the `measurement` method:
+Generate measurements *for each observation* with the `measurement` method:
 
 ```julia
 julia> measurements(multitarget_L1, t̂, t, weights)

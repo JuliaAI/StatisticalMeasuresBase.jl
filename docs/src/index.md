@@ -53,7 +53,7 @@ t̂ = ŷ' |> Tables.table |> Tables.rowtable
 multitarget_L1(t̂, t, weights)
 ```
 
-Access per-observation measurements with the `measurement` method:
+Generate measurements *for each observation* with the `measurement` method:
 
 ```@example 01
 measurements(multitarget_L1, t̂, t, weights)
