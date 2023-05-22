@@ -91,8 +91,9 @@ with the same number of observations as `y`.
 
 # New implementations
 
-Overloading the trait is optional and it is typically not overloaded. The general fallback
-returns `false` but it is `true` for any [`multimeasure`](@ref), and the value is
+Overload this trait for a new measure type that consumes multiple observations, unless it
+has been constructed using `multimeaure` or is an $API.jl wrap thereof. The general
+fallback returns `false` but it is `true` for any [`multimeasure`](@ref), and the value is
 propagated by other wrappers.
 
 """

@@ -9,7 +9,7 @@ API.is_measure(::Measure{typeof(min)}) = true
 @testset "calling" begin
     measure = Measure(min)
     @test measure(2, -3) == 3
-    @test measurements(measure, 2, -3) == 3
+    @test measurements(measure, 2, -3) == [3,]
 end
 
 true
