@@ -76,9 +76,9 @@ Specically, this package provides:
   function) that consumes single observations to measures consuming vectors, arrays or
   tables (multi-target measures).
 
-- Other [wrappers](@ref wrappers) to add missing value support, argument checks,
-  direct callability, or to silently treat unsupported weights as uniform (good for
-  application of a batch of measures with mixed degrees of weight support)
+- Other [wrappers](@ref wrappers) to add missing value support, argument checks, or to
+  silently treat unsupported weights as uniform (good for application of a batch of
+  measures with mixed degrees of weight support)
 
 - [`measurements`](@ref), a method to return *unaggregated* measurements
 
