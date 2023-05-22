@@ -11,7 +11,7 @@ on data.
 
 # New implementations
 
-Overloading this trait is optional. A fallback returns the aggregated measure, repeated
+Overloading this function is optional. A fallback returns the aggregated measure, repeated
 `n` times, where `n = MLUtils.numobs(y)`.  It is not typically necessary to overload
 `measurements` for wrapped measures.  All [`multimeasure`](@ref)s provide the obvious
 fallback and other wrappers simply forward the `measurements` method of the atomic
