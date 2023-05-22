@@ -7,7 +7,7 @@ A Julia package for building production-ready measures (metrics) for statistics 
 [![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/)
 
 Related:
-[StatisticalMeasures.jl](https://github.com/JuliaAI/StatisticalMeasures.jl).
+[StatisticalMeasures.jl](https://juliaai.github.io/StatisticalMeasures.jl/dev/)
 
 
 ## The main idea 
