@@ -1,5 +1,13 @@
 ```@raw html
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<div style="font-size:1.4em;font-weight:bold;">
+  <a href="tutorial"
+    style="color: #389826;">Tutorial</a>           &nbsp;|&nbsp;
+  <a href="https://juliaai.github.io/StatisticalMeasuresBase.jl/dev/implementing_new_measures/#definitions"
+    style="color: #9558B2;">What is a measure?</a>
+</div>
+
 <span style="color: #9558B2;font-size:4.5em;">
 StatisticalMeasuresBase.jl</span>
 <br>
@@ -45,17 +53,11 @@ t̂ = ŷ' |> Tables.table |> Tables.rowtable
 multitarget_L1(t̂, t, weights)
 ```
 
-Access per-observation measurements with the `measurement` method:
+Generate measurements *for each observation* with the `measurement` method:
 
 ```@example 01
 measurements(multitarget_L1, t̂, t, weights)
 ```
-
-### Quick links
-
-- [Tutorial](@ref), to jump right into building new measures
-- [What is a measure?](@ref definitions)
-
 
 # Overview
 
@@ -74,9 +76,9 @@ Specically, this package provides:
   function) that consumes single observations to measures consuming vectors, arrays or
   tables (multi-target measures).
 
-- Other [wrappers](@ref wrappers) to add missing value support, argument checks,
-  direct callability, or to silently treat unsupported weights as uniform (good for
-  application of a batch of measures with mixed degrees of weight support)
+- Other [wrappers](@ref wrappers) to add missing value support, argument checks, or to
+  silently treat unsupported weights as uniform (good for application of a batch of
+  measures with mixed degrees of weight support)
 
 - [`measurements`](@ref), a method to return *unaggregated* measurements
 
