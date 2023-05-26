@@ -9,6 +9,7 @@ A Julia package for building production-ready measures (metrics) for statistics 
 Related:
 [StatisticalMeasures.jl](https://juliaai.github.io/StatisticalMeasures.jl/dev/)
 
+[List](https://github.com/FluxML/FluxML-Community-Call-Minutes/discussions/38) of Julia packages providing metrics.
 
 ## The main idea
 
