@@ -47,16 +47,16 @@ multitarget_L1(ŷ, y, weights)
 ```
 
 ```@example 01
-using Tables
-t = y' |> Tables.table |> Tables.rowtable
-t̂ = ŷ' |> Tables.table |> Tables.rowtable
-multitarget_L1(t̂, t, weights)
+using DataFrames
+df    = DataFrame(y', :auto)
+df̂    = DataFrame(ŷ', :auto)
+multitarget_L1(df̂, df, weights)
 ```
 
 Generate measurements *for each observation* with the `measurement` method:
 
 ```@example 01
-measurements(multitarget_L1, t̂, t, weights)
+measurements(multitarget_L1, df̂, df, weights)
 ```
 
 # Overview
