@@ -69,7 +69,7 @@ measures. For a package that does, based on this interface, see
 can also be applied to measures provided by other packages, such as
 [LossFunctions.jl](https://github.com/JuliaML/LossFunctions.jl).
 
-Specically, this package provides:
+Specifically, this package provides:
 
 - A measure wrapper [`multimeasure`](@ref) that leverages MLUtils.jl to broadcast a simple
   measure over multiple observations; the main use case is for extending a measure (e.g.,
