@@ -56,7 +56,7 @@ julia> multitarget_L1(df̂, df, weights)
 39
 ```
 
-Generate measurements *for each observation* with the `measurement` method:
+Generate measurements *for each observation* with the `measurements` method:
 
 ```julia
 julia> measurements(multitarget_L1, df̂, df, weights)

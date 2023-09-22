@@ -53,7 +53,7 @@ df̂    = DataFrame(ŷ', :auto)
 multitarget_L1(df̂, df, weights)
 ```
 
-Generate measurements *for each observation* with the `measurement` method:
+Generate measurements *for each observation* with the `measurements` method:
 
 ```@example 01
 measurements(multitarget_L1, df̂, df, weights)
