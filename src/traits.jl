@@ -176,7 +176,7 @@ value has no meaning.
 
 # New implementations
 
-Optional but strongly recommended for measure than consume multiple observations. The
+Optional but strongly recommended for measures that consume multiple observations. The
 fallback returns `Union{}`.
 
 Examples of return values are `Union{Finite,Missing}`, for `CategoricalValue` observations
