@@ -31,7 +31,7 @@ Return a new measure, `fussy`, with the same behavior as `measure`, except that 
   `extra_check==nothing`. Note the first argument here is `measure`, not `atomic_measure`.
 
 Do not use `fussy_measure` unless both `y` and `ŷ` are expected to implement the
-MLUtils.jl `getobs`/`numbos` interface (e.g., are `AbstractArray`s)
+MLUtils.jl `getobs`/`numobs` interface (e.g., are `AbstractArray`s)
 
 See also [`$API.measurements`](@ref), [`$API.is_measure`](@ref)
 
