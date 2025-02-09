@@ -67,7 +67,7 @@ Advanced Examples below.
 using StatisticalMeasuresBase
 
 # define an atomic measure:
-struct L2OnScalars
+struct L2OnScalars end
 (::L2OnScalars)(ŷ, y) = (ŷ - y)^2
 
 julia> $API.external_aggregation_mode(L2OnScalars())

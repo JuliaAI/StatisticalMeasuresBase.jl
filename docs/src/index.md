@@ -47,16 +47,16 @@ multitarget_L1(ŷ, y, weights)
 ```
 
 ```@example 01
-using Tables
-t = y' |> Tables.table |> Tables.rowtable
-t̂ = ŷ' |> Tables.table |> Tables.rowtable
-multitarget_L1(t̂, t, weights)
+using DataFrames
+df    = DataFrame(y', :auto)
+df̂    = DataFrame(ŷ', :auto)
+multitarget_L1(df̂, df, weights)
 ```
 
-Generate measurements *for each observation* with the `measurement` method:
+Generate measurements *for each observation* with the `measurements` method:
 
 ```@example 01
-measurements(multitarget_L1, t̂, t, weights)
+measurements(multitarget_L1, df̂, df, weights)
 ```
 
 # Overview
@@ -69,7 +69,7 @@ measures. For a package that does, based on this interface, see
 can also be applied to measures provided by other packages, such as
 [LossFunctions.jl](https://github.com/JuliaML/LossFunctions.jl).
 
-Specically, this package provides:
+Specifically, this package provides:
 
 - A measure wrapper [`multimeasure`](@ref) that leverages MLUtils.jl to broadcast a simple
   measure over multiple observations; the main use case is for extending a measure (e.g.,

@@ -131,8 +131,8 @@ can_report_unaggregated(measure) = false
 Return the kind of proxy `ŷ` for target predictions expected in calls of the form
 `measure(ŷ, y, args...; kwargs...)`.
 
-Typical return values are `LearnAPI.LiteralTarget()`, when `ŷ` is expected to have the
-same form as `ŷ`, or `LearnAPI.Distribution()`, when the observations in `ŷ` are expected
+Typical return values are `LearnAPI.Point()`, when `ŷ` is expected to have the
+same form as `y`, or `LearnAPI.Distribution()`, when the observations in `ŷ` are expected
 to represent probability density/mass functions. For other kinds of proxy, see the
 [LearnAPI.jl](https://juliaai.github.io/LearnAPI.jl/dev/) documentation.
 
@@ -176,7 +176,7 @@ value has no meaning.
 
 # New implementations
 
-Optional but strongly recommended for measure than consume multiple observations. The
+Optional but strongly recommended for measures that consume multiple observations. The
 fallback returns `Union{}`.
 
 Examples of return values are `Union{Finite,Missing}`, for `CategoricalValue` observations

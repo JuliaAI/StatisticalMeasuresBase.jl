@@ -9,6 +9,7 @@ A Julia package for building production-ready measures (metrics) for statistics 
 Related:
 [StatisticalMeasures.jl](https://juliaai.github.io/StatisticalMeasures.jl/dev/)
 
+[List](https://github.com/FluxML/FluxML-Community-Call-Minutes/discussions/38) of Julia packages providing metrics.
 
 ## The main idea
 
@@ -47,18 +48,18 @@ julia> multitarget_L1(ŷ, y, weights)
 ```
 
 ```julia
-using Tables
-t = y' |> Tables.table |> Tables.rowtable
-t̂ = ŷ' |> Tables.table |> Tables.rowtable
+using DataFrames
+df    = DataFrame(y', :auto)
+df̂    = DataFrame(ŷ', :auto)
 
-julia> multitarget_L1(t̂, t, weights)
+julia> multitarget_L1(df̂, df, weights)
 39
 ```
 
-Generate measurements *for each observation* with the `measurement` method:
+Generate measurements *for each observation* with the `measurements` method:
 
 ```julia
-julia> measurements(multitarget_L1, t̂, t, weights)
+julia> measurements(multitarget_L1, df̂, df, weights)
 3-element Vector{Int64}:
   3
   9

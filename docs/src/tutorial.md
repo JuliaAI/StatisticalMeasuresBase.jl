@@ -115,10 +115,10 @@ instead of an aggregate.
 Mutli-targets (as tables):
 
 ```@example 42
-using Tables
-t    = y' |> Tables.table |> Tables.rowtable
-t̂    = ŷ' |> Tables.table |> Tables.rowtable
-@assert MultitargetHuberLoss()(t̂, t, weights) ≈ MultitargetHuberLoss()(ŷ, y, weights)
+using DataFrames
+df    = DataFrame(y', :auto)
+df̂    = DataFrame(ŷ', :auto)
+@assert MultitargetHuberLoss()(df̂, df, weights) ≈ MultitargetHuberLoss()(df̂, df, weights)
 ```
 
 Multi-dimensional arrays:
