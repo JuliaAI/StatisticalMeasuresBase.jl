@@ -84,7 +84,6 @@ const HuberLossType = API.Multimeasure{
 @trait(
     HuberLossType,
     observation_scitype = Union{ST.Continuous,Missing},
-#   kind_of_proxy = LearnAPI.LiteralTarget(),
     human_name = "Huber loss",
 )
 
@@ -93,7 +92,6 @@ const MultitargetHuberLossType = API.FussyMeasure{<:API.Multimeasure{<:HuberLoss
     MultitargetHuberLossType,
     observation_scitype = AbstractArray{<:Union{Continuous,Missing}},
     can_consume_tables = true,
-#   kind_of_proxy = LearnAPI.LiteralTarget(),
     human_name = "multi-target Huber loss",
 )
 

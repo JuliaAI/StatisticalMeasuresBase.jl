@@ -4,7 +4,6 @@ struct MAEOnScalars end
 
 @trait(
     MAEOnScalars,
-    kind_of_proxy = LiteralTarget(),
     orientation = Loss(),
 )
 
