@@ -14,7 +14,7 @@ ScientificTypesBase = "30f210dd-8aff-4c5f-94ba-8e64358c1161"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
 [compat]
-CategoricalArrays = "0.10"
+CategoricalArrays = "0.10, 1"
 MLUtils = "0.4"
 MacroTools = "0.5"
 OrderedCollections = "1.6"
