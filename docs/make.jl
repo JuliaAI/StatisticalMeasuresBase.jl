@@ -1,10 +1,12 @@
 using Documenter
 using StatisticalMeasuresBase
-const REPO="github.com/JuliaAI/StatisticalMeasuresBase.jl"
 
-makedocs(;
+makedocs(
     modules=[StatisticalMeasuresBase,],
-    format=Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true"),
+    format=Documenter.HTML(
+        prettyurls=true,
+        collapselevel=1,
+    ),
     pages=[
         "Overview" => "index.md",
         "Tutorial" => "tutorial.md",
@@ -12,12 +14,13 @@ makedocs(;
         "Implementing New Measures" => "implementing_new_measures.md",
         "Tools for Implementers" => "tools_for_implementers.md",
     ],
-    repo="https://$REPO/blob/{commit}{path}#L{line}",
+    warnonly = [:cross_references, :missing_docs],
+    repo=Remotes.GitHub("JuliaAI", "StatisticalMeasuresBase.jl"),
     sitename="StatisticalMeasuresBase.jl"
 )
 
 deploydocs(
-    ; repo=REPO,
+    repo="github.com/JuliaAI/StatisticalMeasuresBase.jl.git",
     devbranch="dev",
     push_preview=false,
 )
