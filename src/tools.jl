@@ -11,10 +11,8 @@ Then `typename(x)` returns `:Machine`.
 """
 function typename(x)
     M = typeof(x)
-    if isdefined(M, :name)
-        return M.name.name
-    elseif isdefined(M, :body)
-        return typename(M.body)
+    if M isa DataType || M isa UnionAll
+        return nameof(M)
     else
         return Symbol(string(M))
     end

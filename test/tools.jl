@@ -1,6 +1,7 @@
-module Fruit
 using StatisticalMeasuresBase
 import StatisticalMeasuresBase as API
+
+module Fruit
 
 struct RedApple{T}
     x::T
