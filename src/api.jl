@@ -1,7 +1,3 @@
-#todo note `check` is called `_check` in MLJBase, but not public
-#todo the way class_weights are specified is breaking!
-#todo change `w` -> `weights`
-
 """
     measurements(measure, ŷ, y[, weights, class_weights::AbstractDict])
 
