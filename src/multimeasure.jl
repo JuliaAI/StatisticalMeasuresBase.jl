@@ -94,7 +94,7 @@ ŷ = [7, 6, 5]
 
 - `atomic_weights=nothing`: the weights to be passed to the atomic measure, on each call
   to evaluate it on the pair `(transform(ŷᵢ), transform(yᵢ))`, for each `(ŷᵢ, yᵢ)` in
-  `MLUtils.eachjobs(ŷ, y)`. Assumes `atomic_measure` supports weights.
+  `MLUtils.eachobs(ŷ, y)`. Assumes `atomic_measure` supports weights.
 
 - `skipnan=false`: whether to skip `NaN` values when aggregating (`missing` values are
   always skipped)
